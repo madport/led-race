@@ -16,5 +16,5 @@ We changed the code to customize with our own leds
 
 ## Team
 ---
-- Adrían Madinabeitia ~ [roninAd](https://github.com/roninAd)
+- Adrían Madinabeitia ~ [madport](https://github.com/madport)
 - Iván Porras ~ [Ivan-Porras](https://github.com/Ivan-Porras)
