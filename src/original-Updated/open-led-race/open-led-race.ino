@@ -47,7 +47,7 @@ char const version[] = "0.9.6";
 #define PIN_LED        2    // R 500 ohms to DI pin for WS2812 and WS2813, for WS2813 BI pin of first LED to GND  ,  CAP 1000 uF to VCC 5v/GND,power supplie 5V 2A
 #define PIN_AUDIO      3    // through CAP 2uf to speaker 8 ohms
 
-#define REC_COMMAND_BUFLEN  32  // received command buffer size
+#define REC_COMMAND_BUFLEN  15  // received command buffer size
 #define TX_COMMAND_BUFLEN   80  // send command buffer size
 #define EOL            '\n' // End of Command char used in Protocol
 
@@ -67,7 +67,7 @@ char const version[] = "0.9.6";
 #define NEWRACE_DELAY  5000 
 
 enum{
-  MAX_CARS = 2,
+  MAX_CARS = 4,
 };
 
 
