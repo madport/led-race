@@ -102,7 +102,8 @@ void setup() {
   pinMode(PIN_P1,INPUT_PULLUP); 
   pinMode(PIN_P2,INPUT_PULLUP);  
 
-  if ((digitalRead(PIN_P1)==0)) //push switch 1 on reset for activate physic
+  /* If the buton 1 is pressed in the begin shows the ramps and actives the physic*/
+  if ((digitalRead(PIN_P1)==0)) 
   {
     set_ramp(12,90,100,110);    // ramp centred in LED 100 with 10 led fordward and 10 backguard 
     for(int i=0;i<NPIXELS;i++){track.setPixelColor(i, track.Color(0,0,(127-gravity_map[i])/8) );};
