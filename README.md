@@ -4,7 +4,7 @@ ______      _           _            _        _          _
 | |_/ /___ | |__   ___ | |_ ___  ___| |__    | | ___  __| |   _ __ __ _  ___ ___ 
 |    // _ \| '_ \ / _ \| __/ _ \/ __| '_ \   | |/ _ \/ _` |  | '__/ _` |/ __/ _ \
 | |\ \ (_) | |_) | (_) | ||  __/ (__| | | |  | |  __/ (_| |  | | | (_| | (_|  __/
-\_| \_\___/|_.__/ \___/ \__\___|\___|_| |_|  |_|\___|\__,_|  |_|  \__,_|\___\___                                                                                    
+\_| \_\___/|_.__/ \___/ \__\___|\___|_| |_|  |_|\___|\__,_|  |_|  \__,_|\___\___ 
 ```
 
 # led-race
@@ -16,5 +16,5 @@ We changed the code to customize with our own leds
 
 ## Team
 ---
-- Adrían Madinabeitia ~ [roninAd](https://github.com/roninAd)
+- Adrían Madinabeitia ~ [madport](https://github.com/madport)
 - Iván Porras ~ [Ivan-Porras](https://github.com/Ivan-Porras)
