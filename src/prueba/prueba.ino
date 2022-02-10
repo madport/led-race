@@ -14,13 +14,16 @@ void setup() {
 void all_leds() {
   for (int i = 1; i < NPIXELS; i++) {
     track.setPixelColor(i, track.Color(0, 255, 0));
-    track.setPixelColor(i-1, track.Color(0, 0, 0));
-    track.show();
-    delay(1000);
   }
+   
 }
 
 void loop() {
   all_leds();
+ 
+
+  track.show();
+  delay(500);
+  
 
 }
