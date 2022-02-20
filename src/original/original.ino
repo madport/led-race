@@ -28,7 +28,7 @@
 
                                                             
 #include <Adafruit_NeoPixel.h>
-#define MAXLED         50 // MAX LEDs actives on strip
+#define MAXLED         120 // MAX LEDs actives on strip
 
 //Pins Maker Faire Roma 19 version 
 #define PIN_LED        2  // R 500 ohms to DI pin for WS2812 and WS2813, for WS2813 BI pin of first LED to GND  ,  CAP 1000 uF to VCC 5v/GND,power supplie 5V 2A  
@@ -61,7 +61,7 @@ byte leader=0;
 byte loop_max=5; /* total laps race */
 
 
-float ACEL=0.04;
+float ACEL=0.08;
 float kf=0.015; /* friction constant */
 
 byte flag_sw1=0; /* If the race stars the can move */
@@ -90,7 +90,7 @@ void start_race(){
       track.setPixelColor(i, track.Color(0, 0, 0));
       track.show(); 
     }
-  track.setPixelColor(12, track.Color(0,255,0));
+  track.setPixelColor(12, track.Color(255, 0, 0));
   track.show();
   
   tone(PIN_AUDIO,400);
@@ -100,7 +100,7 @@ void start_race(){
   track.setPixelColor(12, track.Color(0,0,0));
   track.show();
   delay(500);
-  track.setPixelColor(11, track.Color(255,255,0));
+  track.setPixelColor(11, track.Color(255, 255,0));
   track.show();
   tone(PIN_AUDIO,600);
   delay(2000);
@@ -109,13 +109,13 @@ void start_race(){
   track.setPixelColor(11, track.Color(0,0,0));
   track.show();
   delay(500);
-  track.setPixelColor(10, track.Color(255,0,0));
+  track.setPixelColor(10, track.Color(0, 255 ,0));
   track.show();
   tone(PIN_AUDIO,1200);
   delay(2000);
   noTone(PIN_AUDIO);  
 
-  track.setPixelColor(11, track.Color(0,0,0));
+  track.setPixelColor(11, track.Color(0,255,0));
   track.show();                     
   timestamp=0;  
 }
@@ -126,17 +126,17 @@ void winner_fx() {
   for (int note = 0; note < msize; note++) {
     tone(PIN_AUDIO, win_music[note],200);
     delay(230);
-    noTone(PIN_AUDIO);
+    //noTone(PIN_AUDIO);
   }  
 }                                         
 
 /* CHANGED loop1 and loop2 */
 int global_car = 0;
 /* CHANGED loop1 and loop2 */
-void draw_car1(void){for(int i=0;i<=global_car;i++){track.setPixelColor(((word)dist1 % NPIXELS)+i, track.Color(0,255,0));};                   
+void draw_car1(void){for(int i=0;i<=global_car;i++){track.setPixelColor(((word)dist1 % NPIXELS)+i, track.Color(255, 0, 0));};                   
   }
 
-void draw_car2(void){for(int i=0;i<=global_car;i++){track.setPixelColor(((word)dist2 % NPIXELS)+i, track.Color(255,0,0));};            
+void draw_car2(void){for(int i=0;i<=global_car;i++){track.setPixelColor(((word)dist2 % NPIXELS)+i, track.Color(0, 0 ,255));};            
  }
 
 
@@ -184,13 +184,13 @@ void fin_carrera(int ganador){
     int color2 = 0;
     if (ganador == 0){color1 = 255; color2 = 0;}
     else{color1 = 0; color2= 255;}
-    Serial.println("ENCIENDETE PUTO");
+
     for (int i = 0; i < NPIXELS ; i++){
-      track.setPixelColor(i, track.Color(color1, color2,0));
+      track.setPixelColor(i, track.Color(color2, 0, color1));
       track.show(); 
     }
 
-    //winner_fx();
+    winner_fx();
     delay(2000); 
     loop1=0;
     loop2=0;
